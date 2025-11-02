@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mizo Prompt - AI Tools Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a0dad; /* Deep Purple */
+            --secondary-color: #8a2be2; /* Blue Violet */
+            --text-color: #333;
+            --background-gradient: linear-gradient(135deg, #f0f2f5 0%, #e0e5ec 100%);
+            --card-background: #ffffff;
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Changed min-height to 100vh only if content is small */
+            min-height: 100vh; 
+            background: var(--background-gradient);
+            color: var(--text-color);
+            overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .container {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            padding: 40px;
+            max-width: 650px;
+            width: 90%; /* Use 90% for better mobile scaling */
+            text-align: center;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        /* Logo Styling */
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 100px; 
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 700;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            opacity: 0; 
+            animation: slideIn 0.6s ease-out forwards;
+        }
+
+        li:nth-child(1) { animation-delay: 0.2s; }
+        li:nth-child(2) { animation-delay: 0.4s; }
+        li:nth-child(3) { animation-delay: 0.6s; }
+        li:nth-child(4) { animation-delay: 0.8s; }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+        }
+
+        a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        a:hover::before {
+            left: 100%;
+        }
+
+        .mizo-link {
+            background: #28a745; 
+        }
+
+        .mizo-link:hover {
+            background: #218838;
+        }
+
+        /* Ad Block Styling for centering the ad banners */
+        .ad-block {
+            margin: 20px 0;
+            text-align: center;
+            /* Added overflow to prevent horizontal scroll if ad content overflows */
+            overflow: hidden; 
+            max-width: 100%;
+        }
+
+        /* Specific fix for the 468px wide ad on small screens */
+        .ad-block iframe {
+            max-width: 100%;
+            /* This ensures the iframe scales down */
+            width: 100% !important; 
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Query for Mobile Specific adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                width: 95%; /* Maximum width on very small screens */
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            a {
+                padding: 12px 15px;
+                font-size: 1em;
+            }
+            .ad-block {
+                margin: 15px 0; /* Less margin on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="https://i.ibb.co/mCYfGY4D/1747890726319.jpg" alt="Ramesh Gorain Logo">
+        </div>
+        
+        <h1>📸 Mizo Prompt</h1>
+        <p>Create Your Photo using This Ai. Explore more amazing tools below.</p>
+        
+        <div class="ad-block">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '778ff12c1b99474a39ffa65b463a450c',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/778ff12c1b99474a39ffa65b463a450c/invoke.js"></script>
+        </div>
+
+        <div class="ad-block">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '778ff12c1b99474a39ffa65b463a450c',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/778ff12c1b99474a39ffa65b463a450c/invoke.js"></script>
+        </div>
+        
+        <ul>
+            <li>
+                <a href="https://mizo-prompt-in-1.vercel.app/" class="mizo-link" target="_blank">1. Back to Mizo Prompt</a>
+            </li>
+            <li>
+                <a href="https://gemini.google.com/?hl=en-GB" target="_blank">2. Go To Gemini</a>
+            </li>
+            <li>
+                <a href="https://chat.openai.com/" target="_blank">3. Go to ChatGPT</a>
+            </li>
+            <li>
+                <a href="https://www.perplexity.ai/" target="_blank">4. Go to Perplexity AI</a>
+            </li>
+        </ul>
+
+        <div class="ad-block">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '778ff12c1b99474a39ffa65b463a450c',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/778ff12c1b99474a39ffa65b463a450c/invoke.js"></script>
+        </div>
+
+        <div class="ad-block">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '778ff12c1b99474a39ffa65b463a450c',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/778ff12c1b99474a39ffa65b463a450c/invoke.js"></script>
+        </div>
+
+    </div>
+
+</body>
+</html>
